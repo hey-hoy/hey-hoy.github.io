@@ -25,8 +25,8 @@ function countdown() {
     var i = document.getElementById('counter');
     var chk = document.getElementById('payt3');
     if (parseInt(i.innerHTML)<=1) {
-        chk.checked == false;
-        clearInterval(intervalID);
+        chk.checked = false;
+         clearInterval(intervalID);  
     }
     i.innerHTML = parseInt(i.innerHTML)-1;
 }

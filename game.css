@@ -1,7 +1,7 @@
-<style>
-#payt3 {display: none;}
+{display: none;}
 [for="payt3"] {
   position: relative;
+  top: -200px;
   display: block;
   width: 100px;
   height: 100px;
@@ -16,13 +16,15 @@
   cursor: pointer;
 }
 [for="payt3"]:after {
+  
   content: "";
   position: absolute;
-  left: 40%; top: 40%;
-  width: 20%;
-  height: 20%;
+  left: 100%; top: 300%;
+  width: 100%;
+  height: 100%;
   border-radius: 100%;
   background: red;
+  
   /*
   background: #969696 radial-gradient(40% 35%, #ccc, #969696 60%);
   box-shadow:
@@ -32,9 +34,10 @@
   */
 }
 [for="payt3"]:before {
-  content: "YES!";
-  /*position: absolute;
-  top: 8%; right: 8%; bottom: 8%; left: 8%;
+  content: "";
+  position: absolute;
+  top: -100%; 
+  right: 8%; bottom: 8%; left: 8%;
   border-radius: 100%;
   background: #eaeaea;
   box-shadow:
@@ -44,14 +47,16 @@
         inset 0 5px 5px rgba(255,255,255,.3);
 }
 #payt3:checked ~ [for="payt3"]:before {
-  background: #e5e5e5 linear-gradient(#dedede, #fdfdfd);
+  background: #e5e5e5 linear-gradient(#dedede, #fdfdfd);*/
 }
 #payt3:checked ~ [for="payt3"]:after {
   background: #25d025 radial-gradient(40% 35%, #5aef5a, #25d025 60%);
+  top: -200px;
   box-shadow:
         inset 0 3px 5px 1px rgba(0,0,0,.1),
         0 1px 0 rgba(255,255,255,.4),
-        0 0 10px 2px rgba(0, 210, 0, .5);
-  */
+        0 0 10px 2px rgba(0, 210, 0, .5);*/
+  
 }
 </style>
+

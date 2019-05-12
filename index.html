@@ -17,15 +17,24 @@
 <div style="background: url(assets/img/bg.png); position: absolute; right: 480px; bottom: 480px; width: 244px; height: 244px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
 
 <input type="checkbox" id="payt3" checked>
-<p><span id="counter">3</span></p>
+<p><span id="counter">5</span><span>       СЧЁТ: </span><span id="score">0</span></p>
 <label for="payt3"></label>
 
 <script type="text/javascript">
 function countdown() {
     var i = document.getElementById('counter');
+    var s = document.getElementById('score');
     var chk = document.getElementById('payt3');
-    if (parseInt(i.innerHTML)<=1) {
+    
+    if (parseInt(i.innerHTML)==4) {
         chk.checked = false;
+    }
+    if (parseInt(i.innerHTML)==2) {
+        chk.checked = true;
+    }
+    if (parseInt(i.innerHTML)<=1) {
+        chk.checked = true;
+        s.innerHTML = " GAME OVER";
          clearInterval(intervalID);  
     }
     i.innerHTML = parseInt(i.innerHTML)-1;
@@ -34,25 +43,6 @@ function countdown() {
 var intervalID=setInterval(function(){ countdown(); },1000);
 
 </script>
-	
-<!--	
-<input type="checkbox" id="payt3">
-
-<p><span id="counter">10</span></p>
-<label for="payt3"></label>
-<script type="text/javascript">
-function countdown() {
-    var i = document.getElementById('counter');
-    if (parseInt(i.innerHTML)<=1) {
-        
-    }
-    i.innerHTML = parseInt(i.innerHTML)-1;
-}
-setInterval(function(){ countdown(); },1000);
-
-</script>
--->  
-	
 	
 </body>
 </html>

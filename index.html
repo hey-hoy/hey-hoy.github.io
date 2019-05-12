@@ -4,11 +4,8 @@
 	
 	<meta charset="UTF-8">
 	<title>CssGame</title>
-	 
-	    <meta http-equiv="Cache-Control" content="no-cache" />
-	
+	<meta http-equiv="Cache-Control" content="no-cache" />
 	<link rel="stylesheet" href="game.css">
-		
 	
 </head>
 <body>
@@ -26,16 +23,22 @@ function countdown() {
     var s = document.getElementById('score');
     var chk = document.getElementById('payt3');
     
+    let x = Math.random() * (100 - 0) + 0;
+    
     if (parseInt(i.innerHTML)==4) {
         chk.checked = false;
     }
     if (parseInt(i.innerHTML)==2) {
+    		
+       
+        chk.style = "position: absolute; left: "+Math.random() * (50 - 0)+"%; top: "+Math.random() * (50 - 0)+"%";
+
         chk.checked = true;
     }
     if (parseInt(i.innerHTML)<=1) {
-        chk.checked = true;
+        
         s.innerHTML = " GAME OVER";
-         clearInterval(intervalID);  
+        clearInterval(intervalID);  
     }
     i.innerHTML = parseInt(i.innerHTML)-1;
 }
@@ -43,6 +46,8 @@ function countdown() {
 var intervalID=setInterval(function(){ countdown(); },1000);
 
 </script>
+
+<!-- https://jsfiddle.net/56rxd4at/ -->	
 	
 </body>
 </html>

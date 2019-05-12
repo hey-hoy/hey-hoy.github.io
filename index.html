@@ -15,8 +15,25 @@
 <div style="background: url(assets/img/bg.png); position: absolute; right: 160px; bottom: 160px; width: 244px; height: 244px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
 <div style="background: url(assets/img/red.png); position: absolute; right: 700px; bottom: 700px; width: 100px; height: 100px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
 <div style="background: url(assets/img/bg.png); position: absolute; right: 480px; bottom: 480px; width: 244px; height: 244px; border: 0px solid #CCA5D1; border-radius: 160px 160px 160px 160px; - webkit-border-radius: 160px 160px 160px 160px; -moz-border-radius: 160px 160px 160px 160px;"></div>
-<input type="checkbox" id="payt3">
+
+<input type="checkbox" id="payt3" checked>
+<p><span id="counter">3</span></p>
 <label for="payt3"></label>
+
+<script type="text/javascript">
+function countdown() {
+    var i = document.getElementById('counter');
+    var chk = document.getElementById('payt3');
+    if (parseInt(i.innerHTML)<=1) {
+        chk.checked == false;
+        clearInterval(intervalID);
+    }
+    i.innerHTML = parseInt(i.innerHTML)-1;
+}
+
+var intervalID=setInterval(function(){ countdown(); },1000);
+
+</script>
 	
 <!--	
 <input type="checkbox" id="payt3">
@@ -35,6 +52,7 @@ setInterval(function(){ countdown(); },1000);
 
 </script>
 -->  
+	
 	
 </body>
 </html>
